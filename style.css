@@ -1,0 +1,317 @@
+:root {
+    --text-base: #725F40;
+    --text-title: #2E2312;
+    --background: #E4DBCD;
+    --form-background: #F1EADD;
+    --input-background: #EFEAE2;
+    --primary-color: #574C3A;
+    --icons-input-hover: #9C8B6E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#form-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: var(--background) ;
+}
+
+#header-desktop {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--form-background);
+    padding: 0 15% 0 15%;
+    height: 75%;
+    width: 75%;
+    border-radius: 5px;
+}
+
+.header-form {
+    margin: 40px 0 20px 0;
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-grow: 0;
+}
+
+.title-form {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--text-title);
+    margin-left: 10px;
+}
+
+.info-cadastre {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 6px;
+    color: var(--primary-color);
+}
+
+.caption {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--primary-color);
+    flex-grow: 0;
+}
+
+.box-input {
+    display: flex;
+    align-items: center;
+    background-color: var(--input-background);
+    border: 1px solid #BDB09A;
+    border-radius: 5px;
+    flex-grow: 0;
+    margin-bottom: 20px;
+    padding: 0 10px 0 10px;
+    height: 25px;
+    min-height: 45px;
+    transition: all .15s ease;
+}
+
+.lock, .mail {
+    transition: all .15s ease;
+}
+
+.eyeOn {
+    margin-top: 5px;
+    transition: opacity .2s ease;
+    cursor: pointer;
+}
+
+.eyeOff {
+    margin-top: 5px;
+    transition: opacity .2s ease;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.eyeOn svg, .eyeOff svg {
+    fill: var(--primary-color);
+}
+
+.inputs {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: .9rem;
+    border: none;
+    background-color: transparent;
+    outline: 0;
+    padding-left: 10px;
+    width: 100%;
+    color: var(--text-title);
+}
+
+.inputs::placeholder {
+    color: var(--primary-color);
+}
+
+.forgot-forgive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    gap: 10%;
+    margin-bottom: 15px;
+    flex-grow: 0;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+    transition: all .2s ease;
+}
+
+.forgive-caption:hover input ~ .caption-check {
+    border-color: var(--primary-color);
+}
+
+.forgive-caption input:checked ~ .caption-check {
+    background-image: url(./images/check.svg);
+    background-color: #574C3A;
+    border-color: transparent;
+}
+
+.forgive-caption {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background-color: var(--form-background);
+    padding-left: 25px;
+}
+
+#check-forgive {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+    cursor: pointer;
+}
+
+.caption-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #EFEAE2;
+    border: 1px solid #BDB09A;
+    border-radius: 4px;
+}
+
+.forgot-password {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: .875rem;
+    color: #574C3A;
+}
+
+#submit-button {
+    font-size: 1.125rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    height: 10%;
+    max-height: 50px;
+    flex-grow: 0;
+    background-color: #BDB09A;
+    border-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+#submit-button:hover, #submit-button:focus {
+    background-color: var(--primary-color);
+}
+
+.register-box {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    font-size: .875rem;
+    margin-top: 15px;
+    align-self: center;
+    flex-grow: 1;
+}
+
+.register {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#page-image {
+    width: 50%;
+    height: 100%;
+}
+
+.car-image {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 1303px) {
+    html {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 1147px) {
+    form {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1032px) {
+    form {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 860px) {
+    form {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 744px) {
+    #page-image {
+        display: none;
+    }
+
+    #form-main {
+        width: 100%;
+    }
+
+    form {
+        width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 573px) {
+    form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 517px) {
+    form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 18px;
+    }
+    
+    #form-main {
+        background-color: var(--form-background);
+    }
+
+
+    form {
+        width: 100%;
+        height: 100%;
+        padding: 0 5% 0 5%;
+    }
+
+    .forgot-forgive {
+        gap: 8%;
+    }
+
+    .info-cadastre {
+        font-size: .9rem;
+    }
+}
